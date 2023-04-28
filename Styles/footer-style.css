@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+footer{
+    bottom: 0px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 50px;
+    flex-direction: column;
+    position: relative;
+    background-color: #777;
+    color: #000;
+}
+
+footer a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.5s;
+    opacity: 0.75;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer p {
+    font-size: 13px;
+}
+
+.footer_menu, .contact{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.footer_menu{
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+
+footer .footer_menu a {
+    display: inline-block;
+    position: relative;
+}
+
+footer .footer_menu a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+footer .footer_menu a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.links{
+    padding: 10px;
+    margin: 5px;
+    font-size: 25px;
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+
+.social_media_link{
+    transition: 0.5s;
+    display: inline-block;
+    color: #000;
+    position: relative;
+}
+
+.social_media_link:hover{
+    color: black;
+    transform: translateY(-10px);
+}
+
+.menu_link{
+    display: inline-block;
+    transition: 0.5s;
+    opacity: 0.75;
+}
+
+.menu_link:hover, footer a:hover {
+    opacity: 1;
+    color: black;
+}
+
+#comms {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+@media screen and (max-width: 540px) {
+    footer .footer_menu {
+        display: block;
+        text-align: center;
+    }
+}
